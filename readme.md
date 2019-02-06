@@ -1,4 +1,4 @@
-# Adeptus
+![Adeptus Banner](https://github.com/thedigitalembassy/adeptus/raw/master/assets/banner-772x250.png)
 
 ## Introduction
 
