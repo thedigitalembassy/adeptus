@@ -1,7 +1,7 @@
 {
   "name": "thedigitalembassy/adeptus",
   "type": "wordpress-plugin",
-  "license": "GPLv3",
+  "license": "GPL-3.0-only",
   "description": "Wordpress activity log plugin",
   "homepage": "https://www.thedigitalembassy.co/",
   "keywords": [
