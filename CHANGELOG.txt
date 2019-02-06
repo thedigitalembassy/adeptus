@@ -1,0 +1,55 @@
+*** Adeptus Changelog ***
+
+2019.02.06 - version 1.1.0
+ * Fist public release
+
+2018.08.31 - version 1.0.10
+ * Fix - Psr Log autoload paths
+
+2018.08.31 - version 1.0.9
+ * Fix - Install PSR interfaces if they are not available
+
+2018.08.30 - version 1.0.8
+ * Fix - Logstash default port
+
+2018.08.30 - version 1.0.7
+ * New - Add settings interface
+
+2018.08.28 - version 1.0.6
+ * Fix - ArgumentCountError with password reset sensor
+
+2018.08.28 - version 1.0.5
+ * Fix - Update current username in posts sensor to default to '-' instead of false if username is not found
+ * Fix - Issues with multisite passing the same domain for all sub-sites
+
+2018.08.27 - version 1.0.4
+ * New - Errors logger
+ * New - Comments logger
+ * New - Enable/Disable Logging
+ * New - Edit Attachments
+ * New - Woocommerce / Yoast / ACF Options updates
+ * New - Add shell based curl method
+ * Tweak - More Options/Widgets events
+ * Tweak - Array/string option values to object
+
+2018.08.08 - version 1.0.3
+ * Fix - Incorrect alert level code
+
+2018.08.08 - version 1.0.2
+ * New - Options events
+ * New - Whitelist options
+ * New - Theme events
+ * New - Add additional data (client ip, alert code) to event payload
+ * New - Add ability to access adeptus instance from external code
+ * Tweak - Add timeout to curl calls
+ * Tweak - Fix formatting and add filter for options whitelist
+
+2018.08.08 - version 1.0.0
+ * New - LogStash connector
+ * New - Improve curl error handling
+ * New - Multiple logger support
+ * New - Menu and attachments events
+ * Fix - Curl fix
+
+2018.08.01 - version 1.0.0
+ * First release
