@@ -1,7 +1,10 @@
 *** Adeptus Changelog ***
 
+2019.02.08 - version 1.1.1
+ * Remove old settings file
+
 2019.02.06 - version 1.1.0
- * Fist public release
+ * First public release
 
 2018.08.31 - version 1.0.10
  * Fix - Psr Log autoload paths
