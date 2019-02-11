@@ -1,0 +1,7 @@
+language: php
+php:
+- 7.0
+
+script:
+# Just verify that there are no syntax errors in PHP files.
+- php -l *.php
