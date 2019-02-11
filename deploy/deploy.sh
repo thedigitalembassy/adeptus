@@ -10,7 +10,7 @@ rsync \
 --exclude deploy \
 --exclude .git \
 --exclude .travis.yml \
---exclude .gitignore
+--exclude .gitignore \
 -vaz ./* ./svn/trunk/
 
 rsync -vaz ./assets ./svn/
