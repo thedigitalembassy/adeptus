@@ -13,7 +13,7 @@ rsync \
 --exclude .gitignore \
 -vaz --delete ./* ./svn/trunk/
 
-rsync -vaz --delete ./assets ./svn/
+rsync -vaz ./assets ./svn/
 
 # 3. Switch to SVN repository
 cd svn
