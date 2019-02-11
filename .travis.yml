@@ -3,5 +3,25 @@ php:
 - 7.0
 
 script:
-# Just verify that there are no syntax errors in PHP files.
 - php -l *.php
+
+branches:
+  only:
+  # Enable Travis hook on tags (there is regular expression for semver tag)*
+  - "/\\d\\.\\d\\.\\d/"
+
+# Enable Travis deployment
+deploy:
+  # Use script as a deployment tool
+  provider: script
+  script: deploy/deploy.sh
+  # Restrict deployment only for tags
+  on:
+    tags: true
+
+env:
+  global:
+  - SVN_REPOSITORY=https://plugins.svn.wordpress.org/adeptus-activity-audit-log
+  # SVN User/Pass
+  - secure: fSwp5l5ySnPeds/fM3hKELPPVJ+VRdkL+3wTxPH+phtgv88Qc6GnFyQVM2CMk87615879/7TT/I4XXg7YSvPzKhgTcJW1EZVMMaENPY95D8OJIYrNS99KA4K8jF+ommcXFtg1DYOCgecD2ABc1QT2STTryhDJZuZpauVSvHml5OTzQin960o+H9Hci5lfJFc7zKimEc8OYq2KzrcWYMxjdF7/XvsbXVbsZFfZzG0CKtsF+kB6mrnZ9pkiHWEXdaD0dk0cIIVE3Y+WK5yksTCaVNER+nxv0Pf4oVtPDZzGL3DJq4FpbXz6RWdekgDieS03wVsoXsNpUh2yjL5/5j2fL8YFGMYfOCIfUJYjln5J4nyPptNB4TaHDcwtmJaxkbX6ypoH8pay7Il5n9WexLEOQllpQXgb5bjJp9cE+Fx34yCR7mDftjxaIH6XBr7o0qpPs8Ujpvu/VyEHuLjS0eyKZvH9wJpcQN6xrjaH4+or9/OCBfCytuPNbNnR95ZaacLyNxHeoDVVvrNbeljs5nrPQ9qFt+SBnpwgUe31cGyVsQsoZBpqjUiPTXIl7m20RyNPOEDnl6oCIGUmaSovPS6skBVj95hc/C+E1QHiQQtmxwiJ7SFnT5DTErXLFQHkFo5ZiNHSkeSyRSG2k29O6Rlg3SjRq+x5zC6I0XvV48C4qk=
+  - secure: rw1SKhxTP0CDfxdRXbeJqrEE01lNxBN6F2krM+pjwjasPtxpeaMS8z2zCse+Cuf9f69MAwzcahygk6DsnkwdLFv5ivgEkWMAbcBu0a5KbE/eSk7LBi5HUqIa+Nd8vknbEe3BpwZGKrIlaGXTWgrsebuFwgAKcRBNxFXaZjY8tGLGpiFLAccNxgnYR3kt1Vt6V5RjayPIn0eR6uyCgC9fsbNCfae08DhpuUxx6IoLpdYaJPUV8rgHbrZV5Fw+OBlG7DbcrfslS5Ihm3af3iourRNEqA/jI4ggfoqWR02tCwWHVzLikt0crKN23nQPftMjsF3V7HXYUa7QQxnOivIYrHbXMjyjXlZyhxHxjcCLya+dfHwSJSAnHCKLyBXOzdem3B9yBpgILpti8FEcUaZZ6oPr+6c4omZdglSK7d29Dsm4/efkkLV0d4rKcY+Cf0vAyn5Bw5rbk0cF01jfhNYMjh+B3HXHJmp4rp5jbaee+Zw1BmOqLH2Jh2I5GVKX7yoUTUvD2NrRxkCiDqknc2WtzL1cR12PcBu4GKKW1TIpV7lxMoolu3T8Oz36CcHfSHbg2t1B804tH/lKl3JOvlSpuvCFUVLlpKpaa9F/0g/C8iBTUPpjyo0OZdLZ9zd3XG1VIQKrLf+yysbt73KIGNhJvW7HayJgRyMX0w0xT1DOWHg=
