@@ -3,7 +3,7 @@
 Plugin Name: Adeptus: Activity Audit Log
 Plugin URI: http://www.thedigitalembassy.co
 Description: Logs activity on WordPress website.
-Version: 1.1.2
+Version: 1.1.3
 Author: The Digital Embassy
 Author URI: http://www.thedigitalembassy.co/
 License: GPL
