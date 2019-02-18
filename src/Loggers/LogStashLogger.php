@@ -13,7 +13,7 @@ class LogStashLogger extends AbstractLogger
     public function __construct($hostname, $endpoint, $curlMethod = self::CURL_METHOD_PHP)
     {
         $this->hostname   = $hostname;
-        $this->endpoint   = $endpoint;
+        $this->endpoint   = empty($endpoint) ? '' : $endpoint;
         $this->curlMethod = $curlMethod;
     }
 
@@ -28,8 +28,8 @@ class LogStashLogger extends AbstractLogger
      */
     public function log($level, $message, array $context = array())
     {
-        if (empty($this->hostname) || empty($this->endpoint)) {
-            error_log('Adeptus:LogStashLogger - Empty hostname or endpoint.');
+        if (empty($this->hostname)) {
+            error_log('Adeptus:LogStashLogger - Empty hostname.');
             return;
         }
 
@@ -105,7 +105,7 @@ class LogStashLogger extends AbstractLogger
         $url     = escapeshellarg($this->hostname . $this->endpoint);
 
         $cmd = "curl -XPUT -H 'Content-Type: application/json'";
-        $cmd .= " '$url' -d '$payload'";
+        $cmd .= " $url -d $payload";
 
         // In non-dev environments ignore output of command for performance reasons
         if (!defined('WP_ENV') || WP_ENV != 'development') {
