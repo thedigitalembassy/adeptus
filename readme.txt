@@ -2,7 +2,7 @@
 Contributors: pjgalbraith
 Tags: wordpress security plugin, wordpress security audit log, audit log, activity logs, event log wordpress, wordpress user tracking, wordpress activity log, wordpress audit, security event log, audit trail, wordpress security monitor, wordpress admin, wordpress admin monitoring, user activity, admin, multisite,  wordpress monitoring, tracking, user tracking, user activity report, wordpress audit trail
 Requires at least: 4.0
-Tested up to: 5.0
+Tested up to: 5.1
 Stable tag: trunk
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
