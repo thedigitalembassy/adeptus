@@ -24,7 +24,7 @@ class AlertManager implements LogEventAwareInterface
         $alertLevel = isset($payload['alert_level']) ? $payload['alert_level'] : LogLevel::INFO;
 
         // Additional values
-        $payload['wp_home']            = WP_HOME;
+        $payload['wp_home']            = get_home_url(get_main_site_id());
         $payload['domain']             = get_home_url();
         $payload['client_ip']          = $this->getClientIP();
         $payload['client_remote_addr'] = $_SERVER['REMOTE_ADDR'];
